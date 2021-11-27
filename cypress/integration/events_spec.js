@@ -5,44 +5,19 @@ const utils = require('./Utilities/utilities.js');
 const pageLocators = new PageLocators();
 const eventCard = new EventCard();
 
-// context('When I select a specific date from the calendar', () => {
+context('When I select a specific date from the calendar', () => {
+    it('I can only see events that happen on that day', () => {
+        
+        // Access Events Page
+        cy.visit('/')
 
-//     // // Access Events Page
-//     // beforeEach(() => {
-//     //     cy.visit()
-//     // })
+        // Click the current day from the calendar
+        cy.get(pageLocators.calendarDate_Button).contains(utils.getCurrentDate()).click()
 
-//     // it('000_Get_Event_By_Date', () => {
-//     //     // Access Events Page
-//     //     cy.visit('https://damian-events.coursedog.com')
-
-//     //     // Scroll the DD into view, as if the user had scrolled
-//     //     cy.get('#requestEventTypeSelect').scrollIntoView().should('be.visible')
-
-//     //     // Click 'request an event' DD and select option 'Speaker'
-//     //     cy.get('#requestEventTypeSelect').select('Speaker')
-//     // })
-
-//     it('I can only see events that happen on that day', () => {
-//         // Access Events Page
-//         cy.visit()
-
-//         // cy.log("Timestamp now: " + Date.now());
-//         // const d = new Date();
-//         // cy.log("Date Today: " + d);
-//         // cy.log("Date Today: " + d.getDate());
-//         // cy.log("Month Today: " + d.getMonth());
-//         // cy.log("Hour Now: " + d.getHours());
-
-//         // cy.get('div.vc-title').trigger('mouseover')
-//         // cy.wait(4000)
-//         // Scroll the DD into view, as if the user had scrolled
-//         cy.get('span.vc-day-content').contains(utils.getCurrentDate()).click()
-
-//         // Verify the card body contains the above specified date
-//         cy.get(pageLocators.dateField_Titles).should('contain', utils.getTodayDate_MMM_DD_YYYY())
-//     })
-// })
+        // Verify the card body contains the above specified date
+        cy.get(pageLocators.dateField_Titles).should('contain', utils.getTodayDate_MMM_DD_YYYY())
+    })
+})
 
 describe('Given that current date is November 20th, 2021', () => {
 
@@ -96,9 +71,6 @@ describe('Given that current date is November 20th, 2021', () => {
     })
 
 })
-
-
-
 
 describe('Given that current date is September 2nd, 2021', () => {
 
@@ -178,6 +150,4 @@ describe('Given that current date is September 2nd, 2021', () => {
             cy.get(eventCard.description_Text).should('exist')
         })
     })
-
-
 })

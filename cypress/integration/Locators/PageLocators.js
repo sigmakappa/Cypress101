@@ -19,6 +19,7 @@ class PageLocators {
     cancel_Button = '.btn.btn-none'
 
     // Calendar Locators
+    calendarDate_Button = 'span.vc-day-content'
     previousMonth_Button = 'div.vc-arrows-container > div:nth-child(1)'
     nextMonth_Button = 'div.vc-arrows-container > div:nth-child(2)'
     date_Span = 'div.vc-h-full > span'
