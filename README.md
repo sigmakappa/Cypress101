@@ -42,9 +42,8 @@ As of now, we have 1 page which holds the date and calendar utilities [https://g
 * **System Under Test (SUT) related configurations**
 As of now, only the URL for access has been specified in the file (https://github.com/sigmakappa/Cypress101/blob/main/cypress.json) but Cypress allows to configure multiple entries to be configured in this JSON file.
 
-And the main spec file containing the scripts for the [expected specified specs for testing](https://github.com/sigmakappa/Cypress101/blob/main/cypress/integration/Specs.txt) is here -> [events_spec.js](https://github.com/sigmakappa/Cypress101/blob/main/cypress/integration/events_spec.js) 
+**And the main spec file containing the scripts for the [expected specified specs for testing](https://github.com/sigmakappa/Cypress101/blob/main/cypress/integration/Specs.txt) is here -> [events_spec.js](https://github.com/sigmakappa/Cypress101/blob/main/cypress/integration/events_spec.js)** 
 
 ## Contributor
 
 * [Shagun Kaushik](https://github.com/sigmakappa)
-
