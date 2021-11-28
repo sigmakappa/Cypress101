@@ -29,17 +29,17 @@ Framework structure is as in the image specified above.
 
 The main dependencies can be categorized as of now in the following 3 areas:
 
-* Page Objects (under directory 'Locators').
+* **Page Objects (under directory 'Locators')**
 As of now, 2 pages have been dedicated for holding the page objects as below:
   - **Page Locators** 
   [https://github.com/sigmakappa/Cypress101/blob/main/cypress/integration/Locators/PageLocators.js]
   - **Event Card**
    [https://github.com/sigmakappa/Cypress101/blob/main/cypress/integration/Locators/EventCard.js]
 
-* Much required Utilities (under directory 'Utilities')
+* **Much required Utilities (under directory 'Utilities')**
 As of now, we have 1 page which holds the date and calendar utilities [https://github.com/sigmakappa/Cypress101/blob/main/cypress/integration/Utilities/utilities.js]
 
-* System Under Test (SUT) related configurations
+* **System Under Test (SUT) related configurations**
 As of now, only the URL for access has been specified in the file (https://github.com/sigmakappa/Cypress101/blob/main/cypress.json) but Cypress allows to configure multiple entries to be configured in this JSON file.
 
 
