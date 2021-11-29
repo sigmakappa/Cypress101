@@ -21,7 +21,7 @@ https://docs.cypress.io/guides/getting-started/installing-cypress#Installing
 
 Once the Cypress Window is open, click the 'events_spec.js' file in red as below:
 
-![Framework Structure](https://github.com/sigmakappa/Cypress101/blob/main/Images/running.png)
+![Framework Structure Image](https://github.com/sigmakappa/Cypress101/blob/main/Images/running.png)
 
 ### Project Structure and POM Dependencies
 
