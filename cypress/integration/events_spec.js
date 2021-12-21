@@ -33,7 +33,7 @@ describe('Given that current date is November 20th, 2021', () => {
             cy.get(pageLocators.todaysEvents_Link).click()
 
             // Wait for the page to get loaded
-            cy.wait(2000)
+            // cy.wait(2000)
 
             // Verify the listed card(s) contains today's date
             cy.get(pageLocators.dateField_Titles).should('contain', utils.getTodayDate_MMM_DD_YYYY())
@@ -48,7 +48,7 @@ describe('Given that current date is November 20th, 2021', () => {
             cy.get(pageLocators.search_TextBox).type(searchText + '{enter}')
 
             // Wait for the page to get loaded with the expected results
-            cy.wait(2000)
+            // cy.wait(2000)
 
             // Verify the listed card(s) title contains the searched text
             cy.get(pageLocators.searchedCard_Titles).should('contain', searchText)
@@ -63,7 +63,7 @@ describe('Given that current date is November 20th, 2021', () => {
             cy.get(pageLocators.orgFilter_Select).select(organizer)
 
             // Wait for the page to get loaded with the expected results
-            cy.wait(2000)
+            // cy.wait(2000)
 
             // Verify the listed card(s) "Organized by" section contain the above searched organization
             cy.get(pageLocators.organizedBy_Titles).should('contain', organizer)
@@ -89,7 +89,7 @@ describe('Given that current date is September 2nd, 2021', () => {
             cy.get(pageLocators.todaysEvents_Link).click()
 
             // Wait for the page to get loaded
-            cy.wait(2000)
+            // cy.wait(2000)
 
             // Verify that we have no events listed for this date
             cy.get(pageLocators.card_Body).should('not.exist')
@@ -103,7 +103,7 @@ describe('Given that current date is September 2nd, 2021', () => {
             cy.get(pageLocators.featuredEvents_Link).click()
 
             // Wait for the page to get loaded
-            cy.wait(2000)
+            // cy.wait(2000)
 
             // Verify that we have no events listed for this date
             cy.get(pageLocators.card_Body).should('exist')
@@ -122,13 +122,13 @@ describe('Given that current date is September 2nd, 2021', () => {
             cy.get(pageLocators.search_TextBox).type(searchText + '{enter}')
 
             // Wait for the page to get loaded with the expected results
-            cy.wait(2000)
+            // cy.wait(2000)
 
             // Verify the listed card(s) title contains the searched text
             cy.get(pageLocators.firstCard_Body).click()
 
             // Wait for the event card to get loaded with the contents
-            cy.wait(2000)
+            // cy.wait(2000)
 
             // Verifying that the following details about the event are visible on Event Card
             // "Add to calendar link"
