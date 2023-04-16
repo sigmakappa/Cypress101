@@ -1,7 +1,7 @@
-import EventCard from './Locators/EventCard.js';
-import PageLocators from './Locators/PageLocators.js';
+import EventCard from './Locators/EventCard.cy.js';
+import PageLocators from './Locators/PageLocators.cy.js';
 
-const utils = require('./Utilities/utilities.js');
+const utils = require('./Utilities/utilities.cy.js');
 const pageLocators = new PageLocators();
 const eventCard = new EventCard();
 

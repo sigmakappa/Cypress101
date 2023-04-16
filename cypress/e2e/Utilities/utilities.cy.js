@@ -1,4 +1,4 @@
-import PageLocators from '../Locators/PageLocators.js';
+import PageLocators from '../Locators/PageLocators.cy.js';
 const pageLocators = new PageLocators();
 
 const months_short = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
