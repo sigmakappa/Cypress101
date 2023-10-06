@@ -18,3 +18,6 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+// For reporting using mochawesome [https://www.browserstack.com/guide/cypress-html-reporter]
+// import 'cypress-mochawesome-reporter/register';

@@ -1,90 +1,3 @@
-# Cypress101
-
-Ready-to-use Cypress framework 
-
-## Description
-
-A ready to use automation framework which puts into use the key concepts of Page Object Model (POM) and is easy to use and maintain.
-
-## Getting Started
-
-### Dependencies
-
-* For the entire list of dependencies and requirements, refer this link: https://docs.cypress.io/guides/getting-started/installing-cypress#System-requirements
-
-### Installing
-
-* Installing instructions as here:
-https://docs.cypress.io/guides/getting-started/installing-cypress#Installing
-
-### Executing the main script
-
-Once the Cypress Window is open, click the 'events_spec.js' file in red as below:
-
-![Framework Structure Image](https://github.com/sigmakappa/Cypress101/blob/main/Images/running.png)
-
-### Project Structure and POM Dependencies
-
-Framework structure is as in the image specified above.
-
-The main dependencies can be categorized as of now in the following 3 areas:
-
-* **Page Objects (under directory 'Locators')**
-As of now, 2 pages have been dedicated for holding the page objects as below:
-  - **Page Locators** 
-  [https://github.com/sigmakappa/Cypress101/blob/main/cypress/integration/Locators/PageLocators.js]
-  - **Event Card**
-   [https://github.com/sigmakappa/Cypress101/blob/main/cypress/integration/Locators/EventCard.js]
-
-* **Much required Utilities (under directory 'Utilities')**
-As of now, we have 1 page which holds the date and calendar utilities [https://github.com/sigmakappa/Cypress101/blob/main/cypress/integration/Utilities/utilities.js]
-
-* **System Under Test (SUT) related configurations**
-As of now, only the URL for access has been specified in the file (https://github.com/sigmakappa/Cypress101/blob/main/cypress.json) but Cypress allows to configure multiple entries to be configured in this JSON file.
-
-**And the main spec file containing the scripts for the [expected specified specs for testing](https://github.com/sigmakappa/Cypress101/blob/main/cypress/integration/Specs.txt) is here -> [events_spec.js](https://github.com/sigmakappa/Cypress101/blob/main/cypress/integration/events_spec.js)** 
-
-
-### Example Scenarios A Covered here
-
-### Scenario #1
-* When I access www.amazon.in Home Page
-* I should see that its Amazon India Home Page
-
-### Scenario #2
-* Go to www.amazon.science/
-* Search for 'machine learning' in jobs
-* Select Country as 'United States'
-* Verify all results found are based in the US only
-
-### Scenario #3
-* Go to www.amazon.in/
-* Select 'Books' from Search Dropdown
-* And select 'English' from language options
-* In Price Range TextBoxes, put 100 as Min and 200 as Max and click 'Go' button
-* Verify all results found are based on the above critaria only
-
-### Scenario #4
-* Go to www.amazon.in/
-* Select 'Books' from Search Dropdown
-* In Search Box, enter 'Neil Gaiman' and press 'Enter' key
-* Verify all results found are based on the above critaria only
-
-## Contributor
-
-* [Shagun Kaushik](https://github.com/sigmakappa)
-
-
-
-
-
-
-# .
-# .
-# **New text goes from here**
-# .
-# .
-
 # Cypress 101
 
 Yo, what's up! Welcome to the Cypress UI Testing Repo! This is the place to be if you want to learn about UI testing using Cypress and take your testing game to the next level. 
@@ -94,13 +7,14 @@ Yo, what's up! Welcome to the Cypress UI Testing Repo! This is the place to be i
 - [What's Cypress?](#whats-cypress)
 - [Why Cypress for UI Testing?](#why-cypress-for-ui-testing)
 - [Getting Started](#getting-started)
+- [Executing the Test Scripts](#executing-the-main-script)
 - [Example Scenarios Covered here](#example-scenarios-covered-here)
 - [Contribute to the Fun](#contribute-to-the-fun)
 - [License](#license)
 
 ## What's Cypress?
 
-Cypress is a super slick front-end testing tool made for the modern web. It's fast, reliable, and easy to use. You can write end-to-end tests that run in a real browser. 
+[Cypress](https://docs.cypress.io/guides/overview/why-cypress#In-a-nutshell) is a super slick front-end testing tool made for the modern web. It's fast, reliable, and easy to use. You can write end-to-end tests that run in real browser(s) [Chrome, FireFox, Edge & Electron so far]. 
 
 ## Why Cypress for UI Testing?
 
@@ -117,37 +31,47 @@ To get started with Cypress, you can follow these steps:
 
 1. Clone this repository: `git clone https://github.com/sigmakappa/Cypress101.git`
 2. Install the dependencies: `npm install`
-3. Open Cypress: `npm run cypress:open`
+3. Open Cypress: `npm cypress open`
 
-This will open the Cypress Test Runner, where you can see all of the tests in the `cypress/integration` folder. From here, you can run individual tests or the entire suite.
+This will open the Cypress Test Runner, where you can see all of the tests in the `cypress/e2e` folder. From here, you can run individual tests or the entire suite. 
+* Or if you are intersted in running the tests via the command line, there's a plethora of options available [here](https://docs.cypress.io/guides/guides/command-line).
 
+## Executing the main script
 
+Once the Cypress Window is open, click the 'Amazon*.cy.js' files in red as below:
+
+![Framework Structure Image](/Images/running_tests.png)
 
 ## Example Scenarios Covered here
 
-### **Scenario #1**
-* When I access www.amazon.in Home Page
-* I should see that its Amazon India Home Page
+### Scenario #1
+* Go to www.amazon.in/
+* Verify the Home Page contins the Amazon.in logo
 
-### **Scenario #2**
+
+### Scenario #2
 * Go to www.amazon.science/
-* Search for 'machine learning' in jobs
-* Select Country as 'United States'
-* Verify all results found are based in the US only
+* Select Country as 'United States' and Category as 'Economics' 
+* Verify all results found are based in the US only and are for 'Economics' only
 
-### **Scenario #3**
+
+### Scenario #3
 * Go to www.amazon.in/
 * Select 'Books' from Search Dropdown
 * And select 'English' from language options
 * In Price Range TextBoxes, put 100 as Min and 200 as Max and click 'Go' button
 * Verify all results found are based on the above critaria only
 
-### **Scenario #4**
+
+### Scenario #4
 * Go to www.amazon.in/
 * Select 'Books' from Search Dropdown
 * In Search Box, enter 'Neil Gaiman' and press 'Enter' key
 * Verify all results found are based on the above critaria only
 
+<br>
+
+![Screen Recording](/Images/screen_recording.gif)
 
 ## Contribute to the Fun
 
